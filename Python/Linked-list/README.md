@@ -6,4 +6,5 @@ In native python library there is no Node datatype and as this is the basic buil
 [Node.py](https://github.com/sandeep-skb/Data-Structures/blob/master/Python/Linked-list/create_node.py)
 
 Next using this Node we can create a singly linked list and traverse through the list.
+
 [Singly LinkedList](https://github.com/sandeep-skb/Data-Structures/blob/master/Python/Linked-list/singly_linked_list.py)
