@@ -1,4 +1,4 @@
-##Linked-List in PYTHON
+Linked-List in PYTHON
 
 A linked list is a datatype which contains data elements which may or may not reside in contigous memory addresses. It is for this reason linked list are very powerful than arrays which have an absolute requirement of contigous memory allocation. Linked lists are also of dynamic size.
 Since the linked list elements are not in contigous memory addresses, it needs to store the address of the next data along with the current data value. This entity which stores data and the address of the next data element is called a  "Node".
