@@ -7,3 +7,10 @@ In native python library there is no Node datatype and as this is the basic buil
 
 Next using this Node we can create a singly linked list and traverse through the list.
 [Singly LinkedList](https://github.com/sandeep-skb/Data-Structures/blob/master/Python/Linked-list/singly_linked_list.py)
+
+After creating a singly LL we have to learn how to insert nodes at:
+* beginning
+* end
+* at location x.
+
+[InsertNode](https://github.com/sandeep-skb/Data-Structures/blob/master/Python/Linked-list/insert_node.py)
