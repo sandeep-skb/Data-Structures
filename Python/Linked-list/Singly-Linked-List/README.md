@@ -19,4 +19,5 @@ Next we have to learn how to delete nodes at:
 * beginning
 * end
 * at location x.
+
 [DeleteNode](https://github.com/sandeep-skb/Data-Structures/blob/master/Python/Linked-list/delete_node.py)
