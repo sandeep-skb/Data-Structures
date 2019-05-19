@@ -14,3 +14,9 @@ After creating a singly LL we have to learn how to insert nodes at:
 * at location x.
 
 [InsertNode](https://github.com/sandeep-skb/Data-Structures/blob/master/Python/Linked-list/insert_node.py)
+
+Next we have to learn how to delete nodes at:
+* beginning
+* end
+* at location x.
+[DeleteNode](https://github.com/sandeep-skb/Data-Structures/blob/master/Python/Linked-list/delete_node.py)
