@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <unordered_map>
 #include <unordered_set>
@@ -15,10 +16,11 @@ public:
   void deleteNode(int);
   void addEdge(int, int);
   void deleteEdge(int, int);
-  void display_graph();
+  void displayGraph();
 };
 
 void Graph::addNode(int nodename){
+      if (outgoing.find(nodename) != outgoing.end()) return;
       numNodes++;
       outgoing[nodename] = unordered_set<int> ();
       incoming[nodename] = unordered_set<int> ();
@@ -30,13 +32,13 @@ void Graph::deleteNode(int node){
   }
   
   numNodes--;
-  for (auto it=outgoing.begin(); it != outgoing.end(); ++it){
-      outgoing[it->first].erase(node);
+  for (auto & it: outgoing){      
+      it.second.erase(node);
   }
   outgoing.erase(node);
   
-  for (auto it=incoming.begin(); it != incoming.end(); ++it){
-      incoming[it->first].erase(node);
+  for (auto & it: incoming){      
+      it.second.erase(node);
   }
   incoming.erase(node);
 }
@@ -52,12 +54,12 @@ void Graph::deleteEdge(int src, int dst){
   incoming[dst].erase(src);
 }
 
-void Graph::display_graph()
+void Graph::displayGraph()
 {
-    for(auto it=outgoing.begin(); it!=outgoing.end(); ++it){
-        cout << it->first << ": [";
-        for (auto i : it->second){
-            cout << i << " ";
+    for(const auto& it : outgoing){
+        cout << it.first << ": [";
+        for (const auto& i : it.second){
+            cout << i << " " ;
         }
         cout << "]" << endl;
     }
@@ -70,19 +72,19 @@ int main()
     graph.addEdge(2,3);
     graph.addEdge(1,2);
     
-    graph.display_graph();
+    graph.displayGraph();
     
     cout << "Adding a Node 4" << endl;
     graph.addNode(4);
-    graph.display_graph();
+    graph.displayGraph();
     
     cout << "deleting edge (1,2)" << endl;
     graph.deleteEdge(1,2);
-    graph.display_graph();
+    graph.displayGraph();
     
     cout << "Adding edge (1,2)" << endl;
     graph.addEdge(1,2);
-    graph.display_graph();
+    graph.displayGraph();
     
     return 0;
 }
